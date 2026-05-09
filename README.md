@@ -12,10 +12,10 @@ A full-stack cloud-based file storage system that enables users to upload, store
 🛠️ Tech Stack
 
 # Frontend:
-React.js
+React.js,
 CSS
 # Backend:
-Node.js
+Node.js,
 Express.js
 # Database:
 MongoDB
