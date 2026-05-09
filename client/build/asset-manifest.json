@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.65860518.css",
+    "main.js": "./static/js/main.b7565a60.js",
+    "static/js/977.8c35837e.chunk.js": "./static/js/977.8c35837e.chunk.js",
+    "static/js/455.4b24954f.chunk.js": "./static/js/455.4b24954f.chunk.js",
+    "static/media/airbox-logo.png": "./static/media/airbox-logo.0baa53e97c1c8296f37f.png",
+    "index.html": "./index.html",
+    "main.65860518.css.map": "./static/css/main.65860518.css.map",
+    "main.b7565a60.js.map": "./static/js/main.b7565a60.js.map",
+    "977.8c35837e.chunk.js.map": "./static/js/977.8c35837e.chunk.js.map",
+    "455.4b24954f.chunk.js.map": "./static/js/455.4b24954f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65860518.css",
+    "static/js/main.b7565a60.js"
+  ]
+}

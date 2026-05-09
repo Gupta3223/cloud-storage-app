@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Cloud Storage Application - Class Diagram">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- User Class -->
+        <mxCell id="2" value="User&#xa;------------------&#xa;- userId&#xa;- name&#xa;- email&#xa;- password&#xa;- role&#xa;------------------&#xa;+ register()&#xa;+ login()&#xa;+ logout()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="220" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Admin Class -->
+        <mxCell id="3" value="Admin&#xa;------------------&#xa;- adminId&#xa;- email&#xa;------------------&#xa;+ manageUsers()&#xa;+ monitorStorage()&#xa;+ manageSystem()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="220" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- File Class -->
+        <mxCell id="4" value="File&#xa;------------------&#xa;- fileId&#xa;- fileName&#xa;- fileSize&#xa;- fileType&#xa;- uploadDate&#xa;------------------&#xa;+ upload()&#xa;+ download()&#xa;+ delete()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="240" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- Folder Class -->
+        <mxCell id="5" value="Folder&#xa;------------------&#xa;- folderId&#xa;- folderName&#xa;- createdDate&#xa;------------------&#xa;+ createFolder()&#xa;+ deleteFolder()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="240" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Storage Class -->
+        <mxCell id="6" value="Storage&#xa;------------------&#xa;- totalSpace&#xa;- usedSpace&#xa;- availableSpace&#xa;------------------&#xa;+ checkQuota()&#xa;+ updateUsage()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="240" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- Auth Service -->
+        <mxCell id="7" value="AuthService&#xa;------------------&#xa;+ authenticate()&#xa;+ authorize()" 
+        style="shape=swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="260" width="240" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="8" style="endArrow=none;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" style="endArrow=none;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" style="endArrow=none;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" style="endArrow=none;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" style="endArrow=none;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

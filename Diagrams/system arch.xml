@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="System Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Actors -->
+        <mxCell id="2" value="End User" style="shape=actor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="40" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Admin" style="shape=actor;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="40" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Client Layer -->
+        <mxCell id="4" value="Client Layer" style="shape=rectangle;strokeWidth=2;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="50" width="250" height="250" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="Web Application&#xa;(ReactJS)" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="4">
+          <mxGeometry x="10" y="10" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Desktop Application&#xa;(Electron)" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="4">
+          <mxGeometry x="10" y="150" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Server Layer -->
+        <mxCell id="7" value="Server Layer" style="shape=rectangle;strokeWidth=2;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="50" width="300" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Backend API&#xa;(Node.js / Express)" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="7">
+          <mxGeometry x="40" y="10" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="Authentication Service" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="7">
+          <mxGeometry x="40" y="80" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="File Management Service" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="7">
+          <mxGeometry x="40" y="140" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" value="Admin Service" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="7">
+          <mxGeometry x="40" y="200" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Storage Layer -->
+        <mxCell id="12" value="Storage Layer" style="shape=rectangle;strokeWidth=2;rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="50" width="300" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" value="User Database&#xa;(MongoDB / MySQL)" style="shape=cylinder;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="12">
+          <mxGeometry x="40" y="10" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" value="File Metadata Database" style="shape=cylinder;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="12">
+          <mxGeometry x="40" y="80" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="File Storage&#xa;(Local Disk / Cloud Storage)" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="12">
+          <mxGeometry x="40" y="150" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="16" value="Use Application" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="17" value="Use Application" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" value="Admin Panel Access" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="19" value="Admin Panel Access" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" value="API Requests / Responses" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="5" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="21" value="API Requests / Responses" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="6" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="22" value="Authenticate Users" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="8" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="23" value="File Operations" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="8" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="24" value="Admin Operations" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="8" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="25" value="Read / Write User Data" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="9" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="26" value="Read / Write File Metadata" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="10" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="27" value="Store / Retrieve Files" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="10" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="28" value="Manage Users" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="11" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="29" value="Access File Info" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="11" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

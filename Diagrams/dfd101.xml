@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Cloud Storage DFD Level 1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- External Entities -->
+        <mxCell id="2" value="User" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="130" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Admin" style="shape=rectangle;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="420" width="130" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Processes -->
+        <mxCell id="4" value="1.0&#xa;User Authentication" style="shape=ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="2.0&#xa;File Management" style="shape=ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="3.0&#xa;Storage Management" style="shape=ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="4.0&#xa;Admin Management" style="shape=ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="220" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Stores -->
+        <mxCell id="8" value="User Database" style="shape=cylinder;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="File Metadata DB" style="shape=cylinder;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="Storage System" style="shape=cylinder;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="700" y="400" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- USER FLOWS -->
+        <mxCell id="11" value="Register / Login" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" value="Auth Result" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="4" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" value="Store / Verify User" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="4" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" value="User Data" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="8" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="Upload / Download / Delete / Rename" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="16" value="File Operation Result" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="5" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="17" value="Save / Update File Info" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="5" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" value="File Details" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="9" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="19" value="Store / Retrieve File" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" value="Save File Data" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="6" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="21" value="File Data" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="10" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="22" value="File Response" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="6" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ADMIN FLOWS -->
+        <mxCell id="23" value="Admin Login" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="24" value="Manage Users / Reports" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="25" value="View / Update Users" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="7" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="26" value="Access File Records" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="27" value="Reports / System Info" style="endArrow=block;strokeWidth=2;" edge="1" parent="1" source="7" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

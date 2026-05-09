@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Cloud Storage Application - Use Case">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- System Boundary -->
+        <mxCell id="2" value="Cloud Storage Application" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="220" y="40" width="520" height="420" as="geometry"/>
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="3" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="40" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="4" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="780" y="160" width="40" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- User Use Cases -->
+        <mxCell id="5" value="Register" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="40" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="90" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="Upload File" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="140" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Download File" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="190" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="View Files" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="240" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="Delete File" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="290" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" value="Check Storage Quota" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="340" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" value="Logout" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="40" y="390" width="150" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Admin Use Cases -->
+        <mxCell id="13" value="Manage Users" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="300" y="140" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" value="Monitor Storage Usage" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="300" y="200" width="200" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="Manage System" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+          <mxGeometry x="300" y="260" width="180" height="40" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
